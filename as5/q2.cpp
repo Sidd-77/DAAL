@@ -89,15 +89,22 @@ multiply_matrix(vector<vector<int> > matrix_A,
 
 		vector<vector<int> > p(multiply_matrix(
 			a00, add_matrix(b01, b11, split_index, -1)));
+			print("1st", p, 0, 0, p.size()-1 ,p[0].size()-1 );
+
 		vector<vector<int> > q(multiply_matrix(
 			add_matrix(a00, a01, split_index), b11));
+			print("1st", q, 0, 0, q.size() ,q[0].size() );
+
 		vector<vector<int> > r(multiply_matrix(
 			add_matrix(a10, a11, split_index), b00));
+			print("1st", r, 0, 0, r.size() ,r[0].size() );
 		vector<vector<int> > s(multiply_matrix(
 			a11, add_matrix(b10, b00, split_index, -1)));
+			print("1st", s, 0, 0, s.size() ,s[0].size() );
 		vector<vector<int> > t(multiply_matrix(
 			add_matrix(a00, a11, split_index),
 			add_matrix(b00, b11, split_index)));
+			print("1st", t, 0, 0, t.size() ,t[0].size() );
 		vector<vector<int> > u(multiply_matrix(
 			add_matrix(a01, a11, split_index, -1),
 			add_matrix(b10, b11, split_index)));
